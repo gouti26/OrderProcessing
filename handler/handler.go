@@ -20,7 +20,7 @@ type Handler struct {
 func NewHandler(db *gorm.DB) *Handler {
 	return &Handler{
 		DB:    db,
-		Queue: make(chan common.OrderQueueRequest, 10000),
+		Queue: make(chan common.OrderQueueRequest, 1000),
 	}
 }
 
